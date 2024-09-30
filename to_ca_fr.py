@@ -14,3 +14,6 @@ df['French'] = df['English'].progress_apply(lambda x: translator_en_fr.translate
 
 # Save the translated DataFrame to a new CSV file
 df.to_csv('translated_results_updated_with_french.csv', index=False)
+
+for language, code in supported_languages.items():
+    print(f"Language: {language}, Code: {code}")

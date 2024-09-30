@@ -3,9 +3,9 @@ import csv
 from tqdm import tqdm
 from deep_translator import GoogleTranslator as GT
 
-def load(file_path):
+def load(file_path, encoding='utf-8'):
     """Load JSON file."""
-    with open(file_path, 'r', encoding='utf-8') as file:
+    with open(file_path, 'r', encoding=encoding) as file:
         return json.load(file)
 
 def compare_keys(json1, json2, prefix='', results=None, swap=False):
